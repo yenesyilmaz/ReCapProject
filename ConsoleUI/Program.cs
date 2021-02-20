@@ -11,19 +11,19 @@ namespace ConsoleUI
     {
         static void Main(string[] args)
         {
-            CarManager carManager = new CarManager(new InMemoryCarDal());
-            BrandManager brandManager = new BrandManager(new InMemoryBrandDal());
+            //CarManager carManager = new CarManager(new InMemoryCarDal());
+            //BrandManager brandManager = new BrandManager(new InMemoryBrandDal());
 
-            foreach (var cars in carManager.GetCars())
-            {
-                foreach (var brands in brandManager.GetBrands())
-                {
-                    if (cars.BrandId == brands.BrandId)
-                    {
-                        Console.WriteLine("{0} model {1} {2} günlük ücreti {3}",cars.ModelYear,brands.BrandName,cars.Description,cars.DaliyPrice);
-                    }
-                }
-            }
+            //foreach (var cars in carManager.GetCars())
+            //{
+            //    foreach (var brands in brandManager.GetBrands())
+            //    {
+            //        if (cars.BrandId == brands.BrandId)
+            //        {
+            //            Console.WriteLine("{0} model {1} {2} günlük ücreti {3}",cars.ModelYear,brands.BrandName,cars.Description,cars.DaliyPrice);
+            //        }
+            //    }
+            //}
 
 
             

@@ -1,4 +1,5 @@
 ﻿using Business.Abstract;
+using Core.Utilities.Results;
 using DataAccess.Abstract;
 using Entities.Concrete;
 using System;
@@ -15,9 +16,10 @@ namespace Business.Concrete
             _carDal = carDal;
         }
         
-        public List<Car> GetCars()
+
+        IDataResult<List<Car>> ICarService.GetCars()
         {
-            return _carDal.GetCars();
+            throw new NotImplementedException();
         }
     }
 }

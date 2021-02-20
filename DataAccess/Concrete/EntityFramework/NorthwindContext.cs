@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Entities.Concrete;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -9,7 +10,11 @@ namespace DataAccess.Concrete.EntityFramework
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer();
+            optionsBuilder.UseSqlServer(@"Server = (localdb)\mssqllocaldb;Database = ReCap;Trusted_Connection = True");
         }
+        public DbSet<Car> Cars { get; set; }
+        public DbSet<Brand> Brands { get; set; }
+        public DbSet<Colors> Colors { get; set; }
+
     }
 }

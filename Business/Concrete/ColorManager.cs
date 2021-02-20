@@ -1,4 +1,5 @@
 ﻿using Business.Abstract;
+using Core.Utilities.Results;
 using DataAccess.Abstract;
 using Entities.Concrete;
 using System;
@@ -14,9 +15,10 @@ namespace Business.Concrete
         {
             _colorDal = colorDal;
         }
-        public List<Colors> GetColors()
+
+        public IDataResult<List<Colors>> GetColors()
         {
-            return _colorDal.GetColors();
+            throw new NotImplementedException();
         }
     }
 }

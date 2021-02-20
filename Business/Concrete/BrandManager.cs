@@ -1,4 +1,5 @@
 ﻿using Business.Abstract;
+using Core.Utilities.Results;
 using DataAccess.Abstract;
 using Entities.Concrete;
 using System;
@@ -14,9 +15,16 @@ namespace Business.Concrete
         {
             _brandDal = brandDal;
         }
-        public List<Brand> GetBrands()
+
+        public IResult Add()
         {
-            return _brandDal.GetBrands();
+            throw new NotImplementedException();
+        }
+
+
+        IDataResult<List<Brand>> IBrandService.GetBrands()
+        {
+            throw new NotImplementedException();
         }
     }
 }

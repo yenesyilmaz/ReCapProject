@@ -4,4 +4,8 @@
     <TargetFramework>netstandard2.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="C:\Users\yenes\source\repos\FinalProject\Core\Core.csproj" />
+  </ItemGroup>
+
 </Project>
